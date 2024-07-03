@@ -20,9 +20,11 @@ body {
 }
 
 .main__all {
+  justify-items: center;
+  align-items: end;
   margin: 3% 2% 0 2%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 30% 1fr 1fr;
   gap: 23px;
 }
 
@@ -43,7 +45,7 @@ body {
 }
 
 .area__Preenchimento {
-  width: 100%;
+  width: 600px;
   height: 500px;
   font-size: 1.5rem;
   color: var(--botao-background);
@@ -82,9 +84,10 @@ body {
 }
 
 .secao__resultado {
-  padding: auto 0;
+  margin-top: 60px;
+  padding: 200px 40px 300px 40px;
   grid-column: 3;
-  grid-row: 2;
+  grid-row: 1 / 4;
   align-self: center;
   justify-self: center;
   height: 1fr;
@@ -112,4 +115,20 @@ body {
   font-weight: 400;
   font-size: 16px;
   text-align: center;
+}
+
+.conteudo__footer {
+  color: white;
+  padding: 1.5%;
+  text-align: center;
+  background-color: var(--botao-background);
+}
+
+.footer__inst {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.footer__inst:hover {
+  color: gray;
 }
