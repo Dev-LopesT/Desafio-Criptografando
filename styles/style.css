@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: var(--cor__background);
+  font-family: "Inter", sans-serif;
+}
+
+.main__all {
+  margin: 3% 2% 0 2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 23px;
+}
+
+.imagem__Perfil {
+  width: 20%;
+}
+
+.cabecalho {
+  justify-self: center;
+  align-self: end;
+  grid-row: 1;
+  grid-column: 1 / 3;
+}
+
+.secao__conteudo {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.area__Preenchimento {
+  width: 100%;
+  height: 500px;
+  font-size: 1.5rem;
+  color: var(--botao-background);
+  resize: none;
+  overflow-wrap: break-word;
+}
+
+.area__Preenchimento::placeholder {
+  color: var(--botao-background);
+}
+
+.text__aviso {
+  display: flex;
+  align-items: center;
+  gap: 1%;
+  margin: 0 0 2% 0;
+}
+
+.icon__Exclamacao {
+  width: 2%;
+}
+
+.btn__Crip {
+  background-color: var(--botao-background);
+  padding: 12px 24px;
+  border-radius: 16px;
+  color: var(--cor__background_2);
+}
+
+.btn__Desc {
+  background-color: var(--botao2--background);
+  padding: 12px 24px;
+  border-radius: 20px;
+  color: var(--botao-background);
+  border: 2px solid var(--botao-background);
+}
+
+.secao__resultado {
+  padding: auto 0;
+  grid-column: 3;
+  grid-row: 2;
+  align-self: center;
+  justify-self: center;
+  height: 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: var(--cor__background_2);
+}
+
+.icon__Diamond {
+  width: 40%;
+}
+
+.titulo__Resultado {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+
+  color: var(--cor-text2);
+}
+
+.paragrafo__Resultado {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+}

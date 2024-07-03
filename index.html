@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Projeto Criptografia</title>
+  <link href="/styles/style.css" rel="stylesheet" type="text/css" />
+  <link href="/styles/styleColors.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <main class="main__all grid-templates-area-1">
+    <header class='cabecalho'>
+      <img src="/assets/vector.svg" alt="foto de Perfil lopes" class='imagem__Perfil'>
+    </header>
+    <section class="secao__conteudo">
+
+
+      <textarea class="area__Preenchimento" placeholder="Digite seu texto"></textarea>
+      <div class="text__aviso">
+        <img class='icon__Exclamacao' src='/assets/vetor-Exclamacao.svg' alt='icone de atenção'>
+        <p>
+          Apenas letras minúsculas e sem acento.
+        </p>
+      </div>
+      <div class="container__btn">
+        <button class="btn__Crip" onclick="criptograndoTexto()">Criptografar</button>
+        <button class="btn__Desc" onclick="descriptograndoTexto()">Descriptografar</button>
+      </div>
+    </section>
+    <section class="secao__resultado">
+      <img class='icon__Diamond' src="/assets/High quality products 1 1.svg" alt="foto-garota olhado para diamante">
+      <h2 class="titulo__Resultado">Nenhuma mensagem encontrada</h2>
+      <p class='paragrafo__Resultado'>Digite um texto que você deseja criptografar ou descriptografar.</p>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
