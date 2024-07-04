@@ -41,10 +41,11 @@ function verificandoLetrasEntrada() {
 }
 
 function descriptograndoTexto() {
-  console.log(textoAlterado);
+  let inputTexto = document.getElementById("texto__Digitado").value;
+  let textoDigitado = Array.from(inputTexto);
 
-  for (let i = 0; i < textoAlterado.length; i++) {
-    switch (textoAlterado[i]) {
+  for (let i = 0; i < textoDigitado.length; i++) {
+    switch (textoDigitado[i]) {
       case "ai":
         textoDescriptografado.push("a");
         break;
