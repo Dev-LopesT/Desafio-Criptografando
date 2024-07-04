@@ -5,15 +5,20 @@ let botaoCopiar = document.querySelector(".btn__Copiar");
 let tituloResultado = document.querySelector(".titulo__Resultado");
 let paragrafoResultado = document.querySelector(".paragrafo__Resultado");
 
-console.log(imagemDiamante);
-
 function criptograndoTexto() {
-  verificandoLetrasEntrada();
-  textoAlterado = textoAlterado.join("");
-  imagemDiamante.style.display = "none";
-  botaoCopiar.style.display = "block";
-  tituloResultado.innerHTML = "Texto Criptografado:";
-  paragrafoResultado.innerHTML = textoAlterado;
+  let inputTexto = document.getElementById("texto__Digitado").value;
+  if (!/^[a-z]+$/.test(inputTexto)) {
+    alert(
+      "Erro! O texto precisa conter apenas letras minúsculas e sem acento."
+    );
+  } else {
+    verificandoLetrasEntrada();
+    textoAlterado = textoAlterado.join("");
+    imagemDiamante.style.display = "none";
+    botaoCopiar.style.display = "block";
+    tituloResultado.innerHTML = "Texto Criptografado:";
+    paragrafoResultado.innerHTML = textoAlterado;
+  }
 }
 
 function verificandoLetrasEntrada() {
@@ -53,36 +58,23 @@ function verificandoLetrasEntrada() {
 
 function descriptograndoTexto() {
   let inputTexto = document.getElementById("texto__Digitado").value;
-  let textoDigitado = Array.from(inputTexto);
+  let textoDescriptografado;
 
-  for (let i = 0; i < textoDigitado.length; i++) {
-    switch (textoDigitado[i]) {
-      case "ai":
-        textoDescriptografado.push("a");
-        break;
-      case "enter":
-        textoDescriptografado.push("e");
-        break;
-      case "imes":
-        textoDescriptografado.push("i");
-        break;
-      case "ober":
-        textoDescriptografado.push("o");
-        break;
-      case "ufat":
-        textoDescriptografado.push("u");
-        break;
-      default:
-        textoDescriptografado.push(textoAlterado[i]);
-    }
+  if (!/^[a-z]+$/.test(inputTexto)) {
+    alert(
+      "Erro! O texto precisa conter apenas letras minúsculas e sem acento."
+    );
+  } else {
+    textoDescriptografado = inputTexto
+      .replace(/enter/g, "e")
+      .replace(/imes/g, "i")
+      .replace(/ai/g, "a")
+      .replace(/ober/g, "o")
+      .replace(/ufat/g, "u");
+
+    imagemDiamante.style.display = "none";
+    botaoCopiar.style.display = "block";
+    tituloResultado.innerHTML = "Texto Descriptografado:";
+    paragrafoResultado.innerHTML = textoDescriptografado;
   }
-
-  textoDescriptografado = textoDescriptografado.join("");
-
-  imagemDiamante.style.display = "none";
-  botaoCopiar.style.display = "block";
-  tituloResultado.innerHTML = "Texto Descriptografado:";
-  paragrafoResultado.innerHTML = textoDescriptografado;
-
-  return console.log(textoDescriptografado);
 }
