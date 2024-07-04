@@ -20,17 +20,22 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+/* Grid Layout */
+
 .main__all {
-  justify-items: center;
+  justify-content: center;
   align-items: end;
   margin: 3% 2% 0 2%;
   display: grid;
-  grid-template-columns: 30% 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   gap: 23px;
 }
 
+/* Cabeçalho e logo */
+
 .imagem__Perfil {
-  width: 20%;
+  justify-self: start;
+  width: 64px;
 }
 
 .cabecalho {
@@ -40,7 +45,7 @@ body {
   justify-self: center;
   align-self: end;
   grid-row: 1;
-  grid-column: 1 / 3;
+  grid-column: 1;
 }
 
 .nome__Logo {
@@ -48,13 +53,15 @@ body {
   font-weight: 500;
 }
 
+/* Seção com textos e Input */
+
 .secao__conteudo {
   grid-column: 2;
   grid-row: 2;
 }
 
 .area__Preenchimento {
-  width: 600px;
+  width: 650px;
   height: 500px;
   font-size: 1.5rem;
   color: var(--botao-background);
@@ -104,6 +111,8 @@ body {
   cursor: pointer;
 }
 
+/* Seção Resultado e imagens */
+
 .secao__resultado {
   margin-top: 60px;
   display: flex;
@@ -111,7 +120,6 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  padding: 180px 5px 300px 5px;
   grid-column: 3;
   grid-row: 1 / 4;
   border-radius: 20px;
@@ -135,9 +143,23 @@ body {
   text-align: center;
 }
 
+.btn__Copiar {
+  display: none;
+  padding: 12px 24px;
+  border-radius: 20px;
+  color: var(--botao-background);
+  border: 2px solid var(--botao-background);
+}
+
+.btn__Copiar:hover {
+  background-color: var(--botao-background);
+  color: var(--cor__background_2);
+  cursor: pointer;
+}
+
 .conteudo__footer {
   color: white;
-  padding: 40px;
+  padding: 20px;
   text-align: center;
   background-color: var(--botao-background);
 }

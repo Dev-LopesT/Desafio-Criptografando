@@ -1,8 +1,19 @@
 let textoAlterado = [];
 let textoDescriptografado = [];
+let imagemDiamante = document.querySelector(".icon__Diamond");
+let botaoCopiar = document.querySelector(".btn__Copiar");
+let tituloResultado = document.querySelector(".titulo__Resultado");
+let paragrafoResultado = document.querySelector(".paragrafo__Resultado");
+
+console.log(imagemDiamante);
 
 function criptograndoTexto() {
   verificandoLetrasEntrada();
+  textoAlterado = textoAlterado.join("");
+  imagemDiamante.style.display = "none";
+  botaoCopiar.style.display = "block";
+  tituloResultado.innerHTML = "Texto Criptografado:";
+  paragrafoResultado.innerHTML = textoAlterado;
 }
 
 function verificandoLetrasEntrada() {
@@ -65,6 +76,13 @@ function descriptograndoTexto() {
         textoDescriptografado.push(textoAlterado[i]);
     }
   }
+
+  textoDescriptografado = textoDescriptografado.join("");
+
+  imagemDiamante.style.display = "none";
+  botaoCopiar.style.display = "block";
+  tituloResultado.innerHTML = "Texto Descriptografado:";
+  paragrafoResultado.innerHTML = textoDescriptografado;
 
   return console.log(textoDescriptografado);
 }
