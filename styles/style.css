@@ -24,7 +24,7 @@ body {
 
 .main__all {
   justify-content: center;
-  align-items: end;
+  align-items: center;
   margin: 3% 2% 0 2%;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -114,7 +114,7 @@ body {
 /* Seção Resultado e imagens */
 
 .secao__resultado {
-  margin-top: 60px;
+  height: 795px;
   display: flex;
   justify-content: center;
   align-items: center;

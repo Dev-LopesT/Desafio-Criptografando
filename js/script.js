@@ -7,7 +7,7 @@ let paragrafoResultado = document.querySelector(".paragrafo__Resultado");
 
 function criptograndoTexto() {
   let inputTexto = document.getElementById("texto__Digitado").value;
-  if (!/^[a-z]+$/.test(inputTexto)) {
+  if (!/^[a-z\s]+$/.test(inputTexto)) {
     alert(
       "Erro! O texto precisa conter apenas letras minúsculas e sem acento."
     );
@@ -60,7 +60,7 @@ function descriptograndoTexto() {
   let inputTexto = document.getElementById("texto__Digitado").value;
   let textoDescriptografado;
 
-  if (!/^[a-z]+$/.test(inputTexto)) {
+  if (!/^[a-z\s]+$/.test(inputTexto)) {
     alert(
       "Erro! O texto precisa conter apenas letras minúsculas e sem acento."
     );
